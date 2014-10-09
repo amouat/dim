@@ -1,0 +1,44 @@
+set nocompatible
+filetype off 
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+Plugin 'junegunn/goyo.vim'
+Plugin 'junegunn/limelight.vim'
+Plugin 'amix/vim-zenroom2'
+
+call vundle#end()
+filetype plugin indent on
+
+syntax enable
+set background=dark
+set linebreak
+set wrap
+set textwidth=80
+set formatoptions+=a
+colorscheme solarized
+
+"Backup files need to go mounted volume separate to where
+"edited file is
+
+"Note dir is for the swap file, bdir for backup file
+set dir=/vim_tmp
+set bdir=/vim_tmp
+
+"Use british english for dictionary and set a shortcut
+set spelllang=en_gb
+nmap <silent> <leader>s :set spell!<CR>
+
+au User GoyoEnter Limelight
+au User GoyoLeave Limelight!
+if has("gui_running")
+  set guioptions-=T guioptions-=m guioptions-=r guioptions-=L
+  set guifont=Monospace\ 12
+  au GUIEnter * :Goyo
+  "this seems to safely fullscreen in gvim but not vim
+  set lines=999
+  set columns=999
+else
+  au VimEnter * :Goyo
+endif
