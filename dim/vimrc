@@ -16,7 +16,6 @@ set background=dark
 set linebreak
 set wrap
 set textwidth=80
-set formatoptions+=a
 colorscheme solarized
 
 "Backup files need to go mounted volume separate to where

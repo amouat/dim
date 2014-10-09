@@ -6,6 +6,7 @@
 WORKDIR=/workdir
 
 #Stuff for handling connecting to X session
+#TODO: make these files unique and delete on exit
 XSOCK=/tmp/.X11-unix/
 XAUTH=/tmp/.docker.xauth
 
