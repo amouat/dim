@@ -4,7 +4,8 @@ dim
 Distraction-free writing with Docker and Vim.
 
 Dim creates a standalone and isolated Vim install tailored for editing text
-documents (especially markdown) in a "distraction free" manner.
+documents (especially markdown) in a "distraction free" manner (think Writeroom
+or iA Writer).
 
 The use of Docker means dim will not interfere with your existing Vim install or
 vimrc. You can safely play with dim without worrying about breaking your
@@ -23,7 +24,7 @@ Currently boot2docker is not supported.
 There is almost no code in dim. It simply installs Vim, the solarized
 colourscheme and the following Vim plug-ins:
 
- - [Vundle](https://github.com/gmarik/Vundle)
+ - [Vundle](https://github.com/gmarik/Vundle.vim)
  - [Goyo](https://github.com/junegunn/goyo.vim)
  - [Limelight](https://github.com/junegunn/limelight.vim)
  - [ZenRoom2](https://github.com/amix/vim-zenroom2)
@@ -49,15 +50,15 @@ gdim should run maximized automatically.
 The first time you run this command, the dim image will be downloaded. You can
 run `build.sh` to build it locally instead.
 
-To turn on spell checking, hit \s. 
+To turn on spell checking, hit `\s`. 
 
 Limelight (dimming of surrounding text) can be turned off with `:Limelight!`.
 
-If you use gdim.sh, note that it runs via a mounted X11 socket, not VNC or ssh
+If you use `gdim.sh`, note that it runs via a mounted X11 socket, not VNC or ssh
 forwarding. Whilst this is more efficient, it potentially breaks the sandboxing
 provided by Docker.
 
 ## Customising
 
-If you want to customise dim, edit dim/vimrc. After making changes, rebuild the
-images by running build.sh.
+If you want to customise dim, edit `dim/vimrc`. After making changes, rebuild
+the images by running `build.sh`.
