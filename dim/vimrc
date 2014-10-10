@@ -6,7 +6,6 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'junegunn/goyo.vim'
 Plugin 'junegunn/limelight.vim'
-Plugin 'amix/vim-zenroom2'
 
 call vundle#end()
 filetype plugin indent on
@@ -16,6 +15,7 @@ set background=dark
 set linebreak
 set wrap
 set textwidth=80
+set linespace=6
 colorscheme solarized
 
 "Backup files need to go mounted volume separate to where
@@ -29,8 +29,9 @@ set bdir=/vim_tmp
 set spelllang=en_gb
 nmap <silent> <leader>s :set spell!<CR>
 
-au User GoyoEnter Limelight
-au User GoyoLeave Limelight!
+"Uncomment following lines if you want Limelight by default.
+"au User GoyoEnter Limelight
+"au User GoyoLeave Limelight!
 if has("gui_running")
   set guioptions-=T guioptions-=m guioptions-=r guioptions-=L
   set guifont=Monospace\ 12

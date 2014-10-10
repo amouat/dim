@@ -8,7 +8,7 @@ if [[ $# == 1 ]]; then
   #get full path
   ABSFILE=$(readlink -f $1)
   FILENAME=$(basename $ABSFILE)
-  docker run -v $ABSFILE:$WORKDIR/$FILENAME -i -t amouat/wrvim $WORKDIR/$FILENAME
+  docker run -v $ABSFILE:$WORKDIR/$FILENAME -i -t amouat/dim $WORKDIR/$FILENAME
 else
   echo "$0 expects exactly one file argument"
   exit 1

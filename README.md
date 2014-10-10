@@ -27,7 +27,6 @@ colourscheme and the following Vim plug-ins:
  - [Vundle](https://github.com/gmarik/Vundle.vim)
  - [Goyo](https://github.com/junegunn/goyo.vim)
  - [Limelight](https://github.com/junegunn/limelight.vim)
- - [ZenRoom2](https://github.com/amix/vim-zenroom2)
 
 Dim also uses an opinionated and customised vimrc which sets up line-breaking,
 word wrapping etc.
