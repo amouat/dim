@@ -17,8 +17,9 @@ xauth nlist :0 | sed -e 's/^..../ffff/' | xauth -f $XAUTH nmerge -
 
 if [[ $# == 1 ]]; then 
   #get full path
-  FILE=$(readlink -f $1)
-  docker run -v $FILE:$WORKDIR/$1 -v $XSOCK:$XSOCK -v $XAUTH:$XAUTH -e XAUTHORITY=$XAUTH -i -t amouat/wrvim $WORKDIR/$1
+  ABSFILE=$(readlink -f $1)
+  FILENAME=$(basename $ABSFILE)
+  docker run -v $ABSFILE:$WORKDIR/$FILENAME -v $XSOCK:$XSOCK -v $XAUTH:$XAUTH -e XAUTHORITY=$XAUTH -i -t amouat/wrvim $WORKDIR/$FILENAME
 else
   echo "$0 expects exactly one file argument"
   exit 1
