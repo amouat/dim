@@ -14,6 +14,10 @@ existing Vim configuration.
 *Warning:* This is an experimental project and its use could potentially result
 in data loss. Please be careful if you use it to edit valuable documents.
 
+## Screenshot
+
+![gDim screenshot](https://raw.githubusercontent.com/amouat/dim/master/screenshots/gdim_cropped.png "gDim Screenshot")
+
 ## Dependencies
 
 You will need to have [Docker](http://docker.com) installed in order to use dim.
@@ -51,7 +55,8 @@ run `build.sh` to build it locally instead.
 
 To turn on spell checking, hit `\s`. 
 
-Limelight (dimming of surrounding text) can be turned off with `:Limelight!`.
+Limelight (dimming of surrounding text) can be turned on with `:Limelight`. Use
+`:Limelight!` to turn it off.
 
 If you use `gdim.sh`, note that it runs via a mounted X11 socket, not VNC or ssh
 forwarding. Whilst this is more efficient, it potentially breaks the sandboxing
@@ -60,4 +65,5 @@ provided by Docker.
 ## Customising
 
 If you want to customise dim, edit `dim/vimrc`. After making changes, rebuild
-the images by running `build.sh`.
+the images by running `build.sh`. In future versions I might map in gdimrc file
+which would allow user customisations without require rebuilding.
