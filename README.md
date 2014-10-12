@@ -66,4 +66,4 @@ provided by Docker.
 
 If you want to customise dim, edit `dim/vimrc`. After making changes, rebuild
 the images by running `build.sh`. In future versions I might map in gdimrc file
-which would allow user customisations without require rebuilding.
+which would allow user customisations without requiring a rebuild.
