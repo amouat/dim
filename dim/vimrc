@@ -25,9 +25,16 @@ colorscheme solarized
 set dir=/vim_tmp
 set bdir=/vim_tmp
 
-"Use british english for dictionary and set a shortcut
-set spelllang=en_gb
+"Force UTF-8
+set encoding=utf-8
+set fileencoding=utf-8
+
+"Use US english for dictionary and set a shortcut
+set spelllang=en_us
 nmap <silent> <leader>s :set spell!<CR>
+
+" Shortcut for reformatting paragraphs (also not in danger of calling ed)
+nnoremap <Leader>r gq}
 
 "Uncomment following lines if you want Limelight by default.
 "au User GoyoEnter Limelight
@@ -42,3 +49,9 @@ if has("gui_running")
 else
   au VimEnter * :Goyo
 endif
+
+"Stuff for asciidoc
+autocmd BufRead,BufNewFile *.asciidoc
+        \ setlocal filetype=asciidoc
+        \ formatlistpat=^\\s*\\d\\+\\.\\s\\+\\\\|^\\s*<\\d\\+>\\s\\+\\\\|^\\s*[a-zA-Z.]\\.\\s\\+\\\\|^\\s*[ivxIVX]\\+\\.\\s\\+
+        \ comments=s1:/*,ex:*/,://,b:#,:%,:XCOMM,fb:-,fb:*,fb:+,fb:.,fb:>

@@ -11,6 +11,9 @@ The use of Docker means dim will not interfere with your existing Vim install or
 vimrc. You can safely play with dim without worrying about breaking your
 existing Vim configuration.
 
+You can read more about bundling applications with Docker and the thinking
+behind Dim on the [container-solutions blog](http://container-solutions.com/2014/10/wrapping-desktop-apps-docker/).
+
 *Warning:* This is an experimental project and its use could potentially result
 in data loss. Please be careful if you use it to edit valuable documents.
 

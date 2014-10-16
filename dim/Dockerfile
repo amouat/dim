@@ -9,7 +9,7 @@
 FROM      ubuntu
 MAINTAINER Adrian Mouat <adrian@adrianmouat.com>
 
-ENV REFRESHED_ON 2014-10-09
+ENV REFRESHED_ON 2014-10-13
 
 VOLUME [ "/vim_tmp" ]
 RUN mkdir /workdir
@@ -20,6 +20,7 @@ RUN apt-get install -y vim
 RUN git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ADD https://raw.githubusercontent.com/altercation/vim-colors-solarized/master/colors/solarized.vim /.vim/colors/solarized.vim
 COPY vimrc /.vimrc
+COPY asciidoc.vim /.vim/syntax/
 
 RUN vim +PluginInstall +qall
 ENTRYPOINT [ "vim" ]
