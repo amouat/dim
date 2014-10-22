@@ -9,8 +9,10 @@
 FROM       amouat/dim
 MAINTAINER Adrian Mouat <adrian@adrianmouat.com>
 
-ENV REFRESHED_ON 2014-10-09
+ENV REFRESHED_ON 2014-10-22
 ENV DISPLAY :0
-
-RUN apt-get install -y vim-gnome
+ 
+RUN apt-get update && \
+    apt-get install -y vim-gnome && \
+    rm -rf /var/lib/apt/lists/*
 ENTRYPOINT [ "gvim", "-f" ]

@@ -9,14 +9,14 @@
 FROM      ubuntu
 MAINTAINER Adrian Mouat <adrian@adrianmouat.com>
 
-ENV REFRESHED_ON 2014-10-13
+ENV REFRESHED_ON 2014-10-22
 
 VOLUME [ "/vim_tmp" ]
 RUN mkdir /workdir
 
-RUN apt-get update
-RUN apt-get install -qq git
-RUN apt-get install -y vim
+RUN apt-get update && \
+    apt-get install -qq git vim && \
+    rm -rf /var/lib/apt/lists/*
 RUN git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ADD https://raw.githubusercontent.com/altercation/vim-colors-solarized/master/colors/solarized.vim /.vim/colors/solarized.vim
 COPY vimrc /.vimrc
