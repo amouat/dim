@@ -13,6 +13,6 @@ ENV REFRESHED_ON 2014-10-22
 ENV DISPLAY :0
  
 RUN apt-get update && \
-    apt-get install -y vim-gnome && \
+    apt-get install -y libcanberra-gtk-module vim-gnome && \
     rm -rf /var/lib/apt/lists/*
 ENTRYPOINT [ "gvim", "-f" ]

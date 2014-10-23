@@ -15,7 +15,7 @@ VOLUME [ "/vim_tmp" ]
 RUN mkdir /workdir
 
 RUN apt-get update && \
-    apt-get install -qq git vim libcanberra-gtk-module && \
+    apt-get install -qq git vim && \
     rm -rf /var/lib/apt/lists/*
 RUN git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ADD https://raw.githubusercontent.com/altercation/vim-colors-solarized/master/colors/solarized.vim /.vim/colors/solarized.vim
