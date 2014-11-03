@@ -18,6 +18,9 @@ set textwidth=80
 set linespace=6
 colorscheme solarized
 
+"Associate .md with markdown not modula
+au BufRead,BufNewFile *.md set filetype=markdown
+
 "Backup files need to go mounted volume separate to where
 "edited file is
 
