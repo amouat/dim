@@ -42,13 +42,14 @@ word wrapping etc.
 
 ## Usage
 
-Just run:
+Just download either the [dim.sh](https://raw.githubusercontent.com/amouat/dim/master/dim.sh) or [gdim.sh](https://raw.githubusercontent.com/amouat/dim/master/dim.sh) script and run:
 
-`$ ./gdim.sh file_to_edit`
+    $ curl -L https://raw.githubusercontent.com/amouat/dim/master/gdim.sh -o gdim.sh
+    $ ./gdim.sh file_to_edit
 
 or:
-
-`$ ./dim.sh file_to_edit`
+    $ curl -L https://raw.githubusercontent.com/amouat/dim/master/dim.sh -o dim.sh
+    $ ./dim.sh file_to_edit
 
 Where `file_to_edit` is an existing file. Using `gdim.sh` will call the gVim
 version of dim, use `dim.sh` to run plain Vim in a terminal. If you use
