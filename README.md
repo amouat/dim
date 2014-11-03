@@ -48,6 +48,7 @@ Just download either the [dim.sh](https://raw.githubusercontent.com/amouat/dim/m
     $ ./gdim.sh file_to_edit
 
 or:
+
     $ curl -L https://raw.githubusercontent.com/amouat/dim/master/dim.sh -o dim.sh
     $ ./dim.sh file_to_edit
 
