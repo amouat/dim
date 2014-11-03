@@ -6,9 +6,9 @@ WORKDIR=/workdir
 
 if [[ $# == 1 ]]; then 
   #get full path
-  ABSFILE=$(readlink -f $1)
-  FILENAME=$(basename $ABSFILE)
-  docker run -v $ABSFILE:$WORKDIR/$FILENAME -i -t amouat/dim $WORKDIR/$FILENAME
+  FILENAME=$(basename $1) 
+  ABSFILE=$( cd $(dirname $1); pwd)/$FILENAME
+  docker run -v $ABSFILE:$WORKDIR/$FILENAME -i -t amouat/dim:latest $WORKDIR/$FILENAME
 else
   echo "$0 expects exactly one file argument"
   exit 1
