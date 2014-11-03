@@ -24,7 +24,9 @@ in data loss. Please be careful if you use it to edit valuable documents.
 ## Dependencies
 
 You will need to have [Docker](http://docker.com) installed in order to use dim.
-Currently boot2docker is not supported.
+
+If you are using boot2docker on MacOS, note that `dim.sh` should work, but 
+currently `gdim.sh` will not.
 
 ## Components
 
