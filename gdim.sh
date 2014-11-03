@@ -19,7 +19,7 @@ if [[ $# == 1 ]]; then
   #get full path
   FILENAME=$(basename $1) 
   ABSFILE=$( cd $(dirname $1); pwd)/$FILENAME
-  docker run -v $ABSFILE:$WORKDIR/$FILENAME -v $XSOCK:$XSOCK -v $XAUTH:$XAUTH -e XAUTHORITY=$XAUTH -i -t amouat/gdim $WORKDIR/$FILENAME
+  docker run -v $ABSFILE:$WORKDIR/$FILENAME -v $XSOCK:$XSOCK -v $XAUTH:$XAUTH -e XAUTHORITY=$XAUTH -i -t amouat/gdim:latest $WORKDIR/$FILENAME
 else
   echo "$0 expects exactly one file argument"
   exit 1
