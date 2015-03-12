@@ -9,8 +9,6 @@
 FROM      ubuntu
 MAINTAINER Adrian Mouat <adrian@adrianmouat.com>
 
-ENV REFRESHED_ON 2014-10-22
-
 VOLUME [ "/vim_tmp" ]
 RUN mkdir /workdir
 
@@ -23,4 +21,5 @@ COPY vimrc /.vimrc
 COPY asciidoc.vim /.vim/syntax/
 
 RUN vim +PluginInstall +qall
+
 ENTRYPOINT [ "vim" ]

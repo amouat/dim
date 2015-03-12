@@ -9,7 +9,6 @@
 FROM       amouat/dim
 MAINTAINER Adrian Mouat <adrian@adrianmouat.com>
 
-ENV REFRESHED_ON 2014-10-22
 ENV DISPLAY :0
  
 RUN apt-get update && \

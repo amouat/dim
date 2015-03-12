@@ -16,6 +16,7 @@ set linebreak
 set wrap
 set textwidth=80
 set linespace=6
+set nojoinspaces
 colorscheme solarized
 
 "Associate .md with markdown not modula
@@ -35,6 +36,9 @@ set fileencoding=utf-8
 "Use US english for dictionary and set a shortcut
 set spelllang=en_us
 nmap <silent> <leader>s :set spell!<CR>
+
+"Use \- to put in an em dash (—)
+nmap <silent> <leader>- i—<esc>
 
 " Shortcut for reformatting paragraphs (also not in danger of calling ed)
 nnoremap <Leader>r gq}
@@ -58,3 +62,6 @@ autocmd BufRead,BufNewFile *.asciidoc
         \ setlocal filetype=asciidoc
         \ formatlistpat=^\\s*\\d\\+\\.\\s\\+\\\\|^\\s*<\\d\\+>\\s\\+\\\\|^\\s*[a-zA-Z.]\\.\\s\\+\\\\|^\\s*[ivxIVX]\\+\\.\\s\\+
         \ comments=s1:/*,ex:*/,://,b:#,:%,:XCOMM,fb:-,fb:*,fb:+,fb:.,fb:>
+
+autocmd BufRead,BufNewFile *.md
+        \ setlocal filetype=markdown
